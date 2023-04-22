@@ -1,5 +1,4 @@
-require 'rspec'
-require './lib/encode.rb'
+require 'spec_helper'
 
 RSpec.describe Encode do
   let(:google) {Encode.new("www.google.com", "bit.ly/31Tt55y")}
