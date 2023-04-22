@@ -44,18 +44,33 @@ RSpec.describe ClickTracker do
     let(:click_tracker) {ClickTracker.new}
 
     it "counts the clicks(elements from the parsed json array) based on the year provided" do
-      link_count = click_tracker.count_clicks_by_year("2021", './spec/mock_data/mock_decodes.json')
+      short_link_count = click_tracker.count_clicks_by_year("2021", './spec/mock_data/mock_decodes.json')
 
-      expect(link_count).to be_a(Hash)
-      expect(link_count).to eq({"http://es.pn/3MgVNnZ"=>2, 
+      expect(short_link_count).to be_a(Hash)
+      expect(short_link_count).to eq({"http://es.pn/3MgVNnZ"=>2, 
                                 "http://bit.ly/2kjqil6"=>2, 
                                 "http://bit.ly/2kkAHNs"=>1, 
                                 "http://bit.ly/2kJdsg8"=>2, 
                                 "http://bit.ly/2lNPjVU"=>1, 
                                 "http://bit.ly/2kJO0qS"=>1, 
                                 "http://bit.ly/2kJej0k"=>1
-                                }
-                              )
+                                })
+    end
+  end
+
+  describe '#click_count_by_long_link' do
+    let(:click_tracker) {ClickTracker.new}
+
+    it "counts the clicks for a given year and displays them according to their long link if encode is provided" do
+      long_link_count = click_tracker.click_count_by_long_link("2021", './spec/mock_data/mock_decodes.json', './data/encodes.csv')
+
+      expect(long_link_count).to be_a(Hash)
+      expect(long_link_count).to eq({"https://reddit.com/"=>2, 
+                                     "https://youtube.com/"=>1, 
+                                     "https://github.com/"=>1, 
+                                     "https://linkedin.com/"=>1,
+                                     "https://twitter.com/"=>1
+                                    })
     end
   end
 end
