@@ -17,7 +17,7 @@ RSpec.describe ClickTracker do
     it "creates adds new encodes to the click tracker encodes array" do
       expect(click_tracker.encodes).to eq([])
 
-      click_tracker.add_encodes
+      click_tracker.add_csv_encodes('./data/encodes.csv')
 
       expect(click_tracker.encodes.length).to eq(6)
       expect(click_tracker.encodes[0].long_link).to eq("https://google.com/")
