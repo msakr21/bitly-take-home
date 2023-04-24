@@ -45,10 +45,11 @@ The language of choice for this challenge is Ruby.
 <!-- Dependencies -->
 ### Dependencies
 
-Dependencies in Ruby are known as Gems. Only two dependencies were actually added/installed:
+Dependencies in Ruby are known as Gems. Only three dependencies were actually added/installed:
 
 1) RSpec for testing 
 2) Pry for debugging
+3) Simplecov for test coverage
 
 The dependencies are installed/controlled via the Gemfile, which for this program is as follows:
 ```
@@ -58,6 +59,7 @@ ruby '2.7.4'
 
 gem 'rspec'
 gem 'pry'
+gem 'simplecov'
 # gem 'csv'
 # gem 'json'
 ```
