@@ -105,7 +105,24 @@ To run this program you must first have Ruby installed on your device. There are
 <summary> Click to expand/collapse </summary>
 
 ### macOS:
+1) Install homebrew if you have not already done so by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in terminal. It will take some time. To confirm it's been installed correctly after it's done, press command + q on your keyboard. Start a new terminal session and type `brew doctor`, you should get `Your system is ready to brew.` as an output.
+
+2) Install rbenv by running `brew install rbenv` in terminal. Once that is complete, run `rbenv init`; you should get an output that looks similar to: 
+```
+  # Load rbenv automatically by appending
+  # the following to ~/.zshrc
+  .
+  eval "$(rbenv init -)"
+```
+
+3) Update your zshrc file with the eval line from the above output. If unsure how to open your zshrc file, use your code editor's shell command (the following example uses VScode and "code" refers to it) in the terminal: `code ~/.zshrc`. If the zshrc file does not exist, you can run ` touch ~/.zshrc` followed by the previous command to open it and paste the eval line in. Make sure to save the file then close using command + q. To confirm this step has been done correctly, start terminal again and type `rbenv versions`. If there are no error messages, you're good to go.
+
+4) Use rbenv to install and/or change Ruby versions as needed. This program is built using Ruby 2.7.4, so we'll either install or switch to that version. If you don't see 2.7.4 listed when you run `rbenv versions`, then run `rbenv install 2.7.4` in terminal. Once done, you should see it listed after running `rbenv versions` (highly recommend command + q before checking). If you see it listed, then once you fork and clone the repo make sure to run `rbenv local 2.7.4` in the program's directory. You could also run `rbenv global 2.7.4` followed by `rbenv rehash` but that would change the globally used version to 2.7.4 rather than just the program's directory's.
+
+
 ### Windows:
+
+![](https://tenor.com/bdtwd.gif)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 </details>
