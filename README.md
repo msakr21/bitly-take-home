@@ -122,13 +122,26 @@ To run this program you must first have Ruby installed on your device. There are
 
 ### Windows:
 
-![](https://tenor.com/bdtwd.gif)
+<img src="https://media.tenor.com/niBYLqVc8Y0AAAAd/pepe-crying.gif" width="120" height="120">
+
+Neither brew nor rbenv are supported by Windows, so you can either install a single version of Ruby to use (in this case 2.7.4) or you could use uru as an alternative Ruby Version/Environment Manager. The first step will be for Ruby 2.7.4 installation. The rest will cover uru set up and usage.
+
+0- I recommend creating a tools folder where you'll be installing this (typically on the same drive as where you have Windows)
+
+1- Head over to https://rubyinstaller.org/downloads/archives/ and find "Ruby+Devkit 2.7.4-1" (I'm not entirely sure if the devkit one is necessary compared to the regular Ruby, but that was what I tried and got to work). Download, and follow the set up instructions (may need to run exe as admin). You should have an option to put it on system path, make sure to have that unselected.
+  
+2- If you have another version of Ruby or if you'd like to add other versions for future or past use, visit: https://bitbucket.org/jonforums/uru/wiki/Downloads and download the windows version in your tools folder
+  
+3- Unzip the folder contents into your tools folder then run `uru_rt admin install` in command prompt in that directory. This is for reference: https://bitbucket.org/jonforums/uru/wiki/Usage, make sure to not set a system Ruby as that can cause issues and expected unexpected behaviour. I did not make a mistake with the description of the behaviour.
+
+4- As per https://bitbucket.org/jonforums/uru/wiki/Examples, run `uru ls` in order to see a list of Ruby versions. You can register/add a Ruby version installation (as per step 1) to uru by running `uru admin add your_installation_path\bin`. Mine command for example was: `uru admin add C:\tools\Ruby27-x64\bin`. Run ls to confirm 2.7.4 has been added successfully. To switch you would just run `uru` followed by whatever Ruby 2.7.4 is listed as. Mine for example was: `uru 274p191`. And you should be all set.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 </details>
 
 <!-- Repository Installation -->
 ### Repository Installation
+* fork and clone repo
 * run`bundle install` in the console/terminal
 
 <p align="right">(<a href="#top">back to top</a>)</p>
