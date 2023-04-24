@@ -31,7 +31,7 @@
 
 ![Product Demo](assets/demo.gif)
 
-The goal of this challenge is to create a program that calculates the number of clicks from 2021 for each record in data set provided in the encodes.csv file. The clicks for different years can be found in the decodes.json file provided.
+The goal of this challenge is to create a program that calculates the number of clicks from 2021 for each record in the data set provided in the encodes.csv file. The clicks for different years can be found in the decodes.json file provided.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
