@@ -149,7 +149,7 @@ Neither brew nor rbenv are supported by Windows, so you can either install a sin
 <!-- Usage -->
 ### Usage
 
-To run the program, just type the code below in the console/terminal:
+1) To run the program, just type the code below in the console/terminal:
 
 `ruby count_clicks_runner.rb`
 
@@ -177,9 +177,11 @@ You'll see the following output:
 ]
 ```
 
-If you'd like to count clicks for other years, use a difference csv file, or use a different json file then in the count_clicks_runner.rb replace the arguments shown below as needed:
+2) If you'd like to count clicks for other years, use a difference csv file, or use a different json file then in the count_clicks_runner.rb replace the arguments shown below as needed:
 
  `("2021", './data/decodes.json', './data/encodes.csv')`
+ 
+ 3) To run the tests, run `bundle exec rspec`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
