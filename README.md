@@ -177,7 +177,7 @@ You'll see the output shown below:
 ]
 ```
 
-2) If you'd like to count clicks for other years, use a difference csv file, or use a different json file then in the count_clicks_runner.rb replace the following arguments: `("2021", './data/decodes.json', './data/encodes.csv')` as needed.
+2) If you'd like to count clicks for other years, use a different csv file, or use a different json file then in the count_clicks_runner.rb replace the following arguments: `("2021", './data/decodes.json', './data/encodes.csv')` as needed.
 
  
 3) To run the tests, run `bundle exec rspec`
